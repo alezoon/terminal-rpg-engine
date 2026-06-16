@@ -5,7 +5,7 @@
 
 typedef struct _Player {
     
-    uint8_t level;
+    uint32_t level;
     uint32_t xp;
 
     uint32_t max_health;
@@ -29,7 +29,7 @@ Player init_player() {
         .health = 10,
         .dmg = 1
     };
-    
+
     return p;
 }
 
@@ -37,7 +37,7 @@ Player init_player() {
 /**
  * Check if the player is alive
  * 
- * @param p A player struct
+ * @param p Pointer to player struct
  * 
  * returns: bool value respective to alive or not
  */
