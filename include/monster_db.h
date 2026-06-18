@@ -6,4 +6,7 @@
 extern Monster forest[];
 extern const uint32_t forest_size;
 
+extern Monster plains[];
+extern const uint32_t plains_size;
+
 #endif
