@@ -5,6 +5,7 @@
 #include "monster.h"
 #include "monster_db.h"
 #include "locations.h"
+#include "experience.h"
 
 /**
  * Battle loop logic
@@ -14,14 +15,14 @@
  */
 void battle(Player *p, Monster *m) {
 
-    int action;
+    uint32_t action;
 
     while (1) {
 
         printf("Your turn.\n");
         printf("1. %-10s    2. %-10s\n", "Attack", "Run");
         printf("Enter choice: ");
-        if (scanf("%d", &action) != 1) {
+        if (scanf("%u", &action) != 1) {
             return;
         }
 
@@ -29,7 +30,7 @@ void battle(Player *p, Monster *m) {
         switch (action) {
             case 1: // Attack
                 damage_monster(m, p->dmg);
-                printf("You have dealt %d damage.\n", p->dmg);
+                printf("You have dealt %u damage.\n", p->dmg);
                 break;
 
             case 2: // Run
@@ -44,13 +45,13 @@ void battle(Player *p, Monster *m) {
         
         // Check if the monster is alive
         if (monster_alive(m)) {
-            printf("%-10s | HP: %d\n", m->name, m->health);
+            printf("%-10s | HP: %u\n", m->name, m->health);
         }
         else {
             printf("You have killed %s.\n", m->name);
             
             //TODO:  Add experience to player
-            
+            add_experience(p,m);
         }
 
         // Monster turn, just damage player for now
@@ -59,7 +60,7 @@ void battle(Player *p, Monster *m) {
 
         // Check if the player is alive
         if (player_alive(p)) {
-            printf("Player | HP: %d\n\n",p->health);
+            printf("Player | HP: %u\n\n",p->health);
         }
         else {
             printf("You have died.\n");

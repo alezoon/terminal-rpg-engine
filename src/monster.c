@@ -70,6 +70,6 @@ void damage_monster(Monster *m, uint32_t amt) {
  * @param p Pointer to player struct
  */
 void monster_to_string(Monster *m) {
-    printf("Name: %s    | Level: %d\nHealth: %d     | Damage: %d\n",
+    printf("Name: %s    | Level: %u\nHealth: %u     | Damage: %u\n",
     m->name, m->level, m->health, m->dmg);
 }

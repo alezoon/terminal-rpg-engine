@@ -24,19 +24,19 @@ int main(void) {
 
 
     // Encounter test
-    Zone zone = FOREST;
-    Monster forest_m = encounter(zone);
-    monster_to_string(&forest_m);
-    printf("\n");
+    //Zone zone = FOREST;
+    //Monster forest_m = encounter(zone);
+    //monster_to_string(&forest_m);
+    //printf("\n");
 
-    zone = PLAINS;
-    Monster plains_m = encounter(zone);
-    monster_to_string(&plains_m);
-    printf("\n");
+    //zone = PLAINS;
+    //Monster plains_m = encounter(zone);
+    //monster_to_string(&plains_m);
+    //printf("\n");
 
 
     // Battle Test (BASIC FUNCTIONALITY WORKING)
-    // battle(&player, &monster);
+    battle(&player, &monster);
 
 
 }

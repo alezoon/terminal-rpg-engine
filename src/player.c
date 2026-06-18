@@ -26,7 +26,7 @@ Player init_player() {
         .level = 1,
         .xp = 0,
         .max_health = 10,
-        .health = 10,
+        .health = 20,
         .dmg = 1
     };
 
@@ -82,7 +82,7 @@ void damage_player(Player *p, uint32_t amt) {
  * @param p Pointer to player struct
  */
 void player_to_string(Player *p) {
-    printf("Level: %d   | Health:  %d/%d\nEXP: %d/%d    | Damage: %d\n",
+    printf("Level: %u   | Health:  %u/%u\nEXP: %u/%u    | Damage: %u\n",
     p->level, p->health, p->max_health, p->xp, 0, p->dmg
     );
 }
