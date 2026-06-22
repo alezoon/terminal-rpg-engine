@@ -27,7 +27,7 @@ Player init_player() {
         .level = 1,
         .xp_req = 120,
         .xp = 0,
-        .max_health = 10,
+        .max_health = 20,
         .health = 20,
         .dmg = 10
     };
