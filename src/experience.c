@@ -45,6 +45,7 @@ void add_experience(Player *p, Monster *m) {
     while (p->xp >= require_experience(p)) {
         p->xp -= require_experience(p);
         p->level++;
+        p->xp_req = require_experience(p);
         printf("You have leveld up!\n");
     }
     

@@ -52,6 +52,7 @@ void battle(Player *p, Monster *m) {
             
             //TODO:  Add experience to player
             add_experience(p,m);
+            break;
         }
 
         // Monster turn, just damage player for now

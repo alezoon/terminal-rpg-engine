@@ -7,6 +7,7 @@
 typedef struct _Player {
     
     uint32_t level;
+    uint32_t xp_req;
     uint32_t xp;
 
     uint32_t max_health;

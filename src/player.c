@@ -6,6 +6,7 @@
 typedef struct _Player {
     
     uint32_t level;
+    uint32_t xp_req;
     uint32_t xp;
 
     uint32_t max_health;
@@ -24,10 +25,11 @@ Player init_player() {
 
     Player p = {
         .level = 1,
+        .xp_req = 120,
         .xp = 0,
         .max_health = 10,
         .health = 20,
-        .dmg = 1
+        .dmg = 10
     };
 
     return p;
@@ -83,6 +85,6 @@ void damage_player(Player *p, uint32_t amt) {
  */
 void player_to_string(Player *p) {
     printf("Level: %u   | Health:  %u/%u\nEXP: %u/%u    | Damage: %u\n",
-    p->level, p->health, p->max_health, p->xp, 0, p->dmg
+    p->level, p->health, p->max_health, p->xp, p->xp_req, p->dmg
     );
 }
