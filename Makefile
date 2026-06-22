@@ -9,5 +9,10 @@ OUT = bin/rpg
 all:
 	$(CC) $(CFLAGS) $(SRC) -o $(OUT) $(LIBS)
 
+
+simulation: src/simulation.c
+	gcc -Wall -Wextra -std=c11 -o bin/simulation src/simulation.c
+
+
 clean:
 	rm -f $(OUT)
