@@ -1,7 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
+#include "simulation_utils.h"
+
 
 int main(int argc, char **argv) {
+    srand(time(NULL));
+
 
     if (argc != 3) {
         return EXIT_FAILURE;
@@ -24,7 +29,22 @@ int main(int argc, char **argv) {
 
     
     // Simulation Loop Logic
-    
+    for (long i = 0; i < sim_count; i++) {
+        CSV_OUTPUT result = battle_simulation();
+
+        fprintf(outfile,
+        "%u,%u,%u,%u,%u,%u,%d,%u,%u\n",
+        result.player_level,
+        result.player_hp,
+        result.player_dmg,
+        result.monster_level,
+        result.monster_hp,
+        result.monster_dmg,
+        result.player_won,
+        result.turns,
+        result.player_remaining_hp
+        );
+    }
 
 
 

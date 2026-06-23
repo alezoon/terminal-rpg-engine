@@ -17,6 +17,7 @@ typedef struct _Player {
 } Player;
 
 Player init_player();
+void adjust_stats(Player *p, uint32_t lvl);
 bool player_alive(Player *p);
 void player_heal(Player *p, uint32_t amt);
 void damage_player(Player *p, uint32_t amt);

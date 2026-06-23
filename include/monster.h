@@ -13,6 +13,7 @@ typedef struct _Monster {
 
     // Stats
     uint32_t level;
+    uint32_t max_health;
     uint32_t health;
     uint32_t dmg;
     

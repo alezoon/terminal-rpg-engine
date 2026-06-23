@@ -17,9 +17,7 @@ typedef struct _Player {
 
 
 /**
- * Initialize the players stat values
- * 
- * @param p Pointer to player struct
+ * Initialize the players stat values as level 1
  */
 Player init_player() {
 
@@ -33,6 +31,20 @@ Player init_player() {
     };
 
     return p;
+}
+
+
+/**
+ * Adjust stat values to match level
+ * 
+ * @param p Pointer to player struct
+ */
+void adjust_stats(Player *p, uint32_t lvl) {
+
+    p->max_health = 20 + lvl * 5;
+    p->health = p->max_health;
+    p->dmg = 10 + lvl * 2;
+
 }
 
 

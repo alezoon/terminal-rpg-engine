@@ -13,7 +13,7 @@ all:
 
 # Simulation
 simulation: src/simulation.c
-	gcc -Wall -Wextra -std=c11 -o bin/simulation src/simulation.c
+	$(CC) $(CFLAGS) -o bin/simulation src/simulation.c src/simulation_utils.c src/player.c src/monster.c src/monster_db.c src/battle.c src/experience.c $(LIBS)
 
 
 
