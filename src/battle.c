@@ -84,6 +84,9 @@ Monster encounter(Zone zone) {
         case FOREST:
             return create_monster(forest[rand() % forest_size]);
 
+        case DEEP_FOREST:
+            return create_monster(deep_forest[rand() % deep_forest_size]);
+
         case PLAINS:
             return create_monster(plains[rand() % plains_size]);
 

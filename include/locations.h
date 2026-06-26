@@ -3,6 +3,7 @@
 
 typedef enum Zone {
     FOREST,
+    DEEP_FOREST,
     PLAINS
 } Zone;
 
