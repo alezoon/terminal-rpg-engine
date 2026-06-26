@@ -24,7 +24,7 @@ int main(int argc, char **argv) {
 
     // Header Information
     fprintf(outfile, 
-        "player_level,player_hp,player_dmg,monster_level,monster_hp,monster_dmg,won,turns,player_remaining_hp\n"
+        "player_level,player_hp,player_dmg,monster_level,monster_hp,monster_dmg,won,turns,player_remaining_hp,zone\n"
     );
 
     
@@ -33,7 +33,7 @@ int main(int argc, char **argv) {
         CSV_OUTPUT result = battle_simulation();
 
         fprintf(outfile,
-        "%u,%u,%u,%u,%u,%u,%d,%u,%u\n",
+        "%u,%u,%u,%u,%u,%u,%d,%u,%u,%s\n",
         result.player_level,
         result.player_hp,
         result.player_dmg,
@@ -42,7 +42,8 @@ int main(int argc, char **argv) {
         result.monster_dmg,
         result.player_won,
         result.turns,
-        result.player_remaining_hp
+        result.player_remaining_hp,
+        result.zone == FOREST ? "FOREST" : result.zone == DEEP_FOREST ? "DEEP_FOREST" : result.zone == PLAINS ? "PLAINS" : "UNKOWN"
         );
     }
 

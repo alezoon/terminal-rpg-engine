@@ -19,6 +19,8 @@ typedef struct _CSV_OUTPUT {
     uint32_t monster_hp;
     uint32_t monster_dmg;
 
+    Zone zone;
+
 } CSV_OUTPUT;
 
 
@@ -32,12 +34,15 @@ CSV_OUTPUT battle_simulation() {
 
     // Randomize zone
     Zone zone;
-    uint32_t z_val = rand() % 2;
+    uint32_t z_val = rand() % 3;
     switch (z_val) {
         case 0:
             zone = FOREST;
             break;
         case 1:
+            zone = DEEP_FOREST;
+            break;
+        case 2:
             zone = PLAINS;
             break;
         default:
@@ -91,7 +96,7 @@ CSV_OUTPUT battle_simulation() {
     output.monster_level = monster.level;
     output.monster_hp = monster.max_health;
     output.monster_dmg = monster.dmg;
-
+    output.zone = zone;
 
     return output;
 }

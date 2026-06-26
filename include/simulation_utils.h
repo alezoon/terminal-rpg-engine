@@ -3,6 +3,7 @@
 
 #include <stdint.h>
 #include <stdbool.h>
+#include "locations.h"
 
 typedef struct _CSV_OUTPUT {
 
@@ -17,6 +18,8 @@ typedef struct _CSV_OUTPUT {
     uint32_t monster_level;
     uint32_t monster_hp;
     uint32_t monster_dmg;
+
+    Zone zone;
 
 } CSV_OUTPUT;
 
