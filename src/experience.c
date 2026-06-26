@@ -13,7 +13,7 @@
  */
 uint32_t require_experience(Player *p) {
     // Soft exponential requirement
-    return 100 * p->level + 20 * p->level * p->level;
+    return 10 * p->level + 20 * p->level * p->level;
 }
 
 

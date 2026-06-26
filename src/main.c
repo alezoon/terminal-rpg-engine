@@ -6,6 +6,7 @@
 #include "monster.h"
 #include "monster_db.h"
 #include "battle.h"
+#include "experience.h"
 
 int main(void) {
     // Random seed
@@ -14,7 +15,10 @@ int main(void) {
 
     // Player Test
     Player player = init_player();
-    //player_to_string(&player);
+    player.xp_req = require_experience(&player);
+    player_to_string(&player);
+    adjust_stats(&player, player.level);
+    player_to_string(&player);
     //printf("\n");
 
     // Monster Test
@@ -29,7 +33,7 @@ int main(void) {
     //monster_to_string(&forest_m);
     //printf("\n");
 
-    zone = PLAINS;
+    //zone = PLAINS;
     //Monster plains_m = encounter(zone);
     //monster_to_string(&plains_m);
     //printf("\n");
@@ -49,6 +53,10 @@ int main(void) {
 
         switch (choice) {
             case 1:
+                if (player.health == 0) {
+                    printf("Cannot battle, you are dead.\n");
+                    break;
+                }
                 Monster monster = encounter(zone);
                 battle(&player, &monster);
                 break;

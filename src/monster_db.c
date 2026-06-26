@@ -1,9 +1,14 @@
 #include "monster.h"
 
 Monster forest[] = {
-    {"Goblin", 3, 1, 0,0,0,0},
+    {"Rabbit", 1,1, 0,0,0,0},
 };
 const uint32_t forest_size = sizeof(forest) / sizeof(forest[0]);
+
+Monster deep_forest[] = {
+    {"Goblin", 3, 1, 0,0,0,0},
+};
+const uint32_t deep_forest_size = sizeof(deep_forest) / sizeof(deep_forest[0]);
 
 
 Monster plains[] = {

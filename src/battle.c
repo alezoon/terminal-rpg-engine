@@ -45,7 +45,7 @@ void battle(Player *p, Monster *m) {
         
         // Check if the monster is alive
         if (monster_alive(m)) {
-            printf("%-10s | HP: %u\n", m->name, m->health);
+            monster_to_string(m);
         }
         else {
             printf("You have killed %s.\n", m->name);
