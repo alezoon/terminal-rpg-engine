@@ -54,8 +54,8 @@ player_level,player_hp,player_dmg,monster_level,monster_hp,monster_dmg,won,turns
 - More monsters
 - Combat AI
 - Analytics dashboard
-- Integration with Combat Balance AI
+- Integration with Encounter Predictor 
 
 ## Related Projects
 
-- Combat Balance AI (planned)
+- Encounter Predictor (planned)
