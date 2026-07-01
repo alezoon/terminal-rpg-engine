@@ -25,7 +25,8 @@ void battle(Player *p, Monster *m) {
         if (scanf("%u", &action) != 1) {
             return;
         }
-
+        printf("\n");
+        
         // Action logic
         switch (action) {
             case 1: // Attack

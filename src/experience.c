@@ -40,7 +40,7 @@ void add_experience(Player *p, Monster *m) {
     uint32_t exp = calculate_experience(m);
 
     p->xp += exp;
-    printf("You have gained %u experience.\n", exp);
+    printf("You have gained %u experience.\n\n", exp);
 
     while (p->xp >= require_experience(p)) {
         p->xp -= require_experience(p);
