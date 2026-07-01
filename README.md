@@ -43,8 +43,8 @@ Generate 100,000 battle simulations:
 Example CSV output:
 
 ```csv
-player_level,player_hp,player_dmg,monster_level,monster_hp,monster_dmg,won,turns,player_remaining_hp
-5,45,20,4,68,17,1,3,11
+player_level,player_hp,player_dmg,monster_level,monster_hp,monster_dmg,won,turns,player_remaining_hp,zone
+5,45,20,4,68,17,1,3,11,DEEP_FOREST
 ```
 
 ## Future Plans
@@ -54,8 +54,8 @@ player_level,player_hp,player_dmg,monster_level,monster_hp,monster_dmg,won,turns
 - More monsters
 - Combat AI
 - Analytics dashboard
-- Integration with Combat Balance AI
+- Integration with Encounter Predictor 
 
 ## Related Projects
 
-- Combat Balance AI (planned)
+- Encounter Predictor (planned)
